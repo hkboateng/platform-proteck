@@ -1,1 +1,1 @@
-# Initial checkin proteck-platform
+# Proteck Software Platform
