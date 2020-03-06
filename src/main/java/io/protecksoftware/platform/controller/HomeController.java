@@ -16,4 +16,8 @@ public class HomeController {
 	public String demo() {
 		return "public/demo";
 	}
+	@RequestMapping(value="/chatbotdemo",method=RequestMethod.GET)
+	public String chatbotdemo() {
+		return "public/chatbotdemo";
+	}
 }
