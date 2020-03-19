@@ -12,7 +12,7 @@ public class HomeController {
 		return "public/index";
 	}
 	
-	@RequestMapping(value="/demo",method=RequestMethod.GET)
+	@RequestMapping(value="/chatdemo",method=RequestMethod.GET)
 	public String demo() {
 		return "public/demo";
 	}

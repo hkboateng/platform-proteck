@@ -1,10 +1,25 @@
+/**
+ * Property of Proteck Software Inc
+ */
 package io.protecksoftware.platform.configuration.mq;
 
-import org.springframework.stereotype.Service;
+import java.util.HashMap;
+import java.util.Map;
 
-import io.protecksoftware.platform.service.configuration.mq.RabbitBrokerService;
+import org.springframework.amqp.support.converter.DefaultClassMapper;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
-@Service
-public class RabbitBrokerConfiguration implements RabbitBrokerService{
+@Configuration
+public class RabbitBrokerConfiguration{
 
+	@Bean
+	public DefaultClassMapper classMapper() {
+		DefaultClassMapper classMapper = new DefaultClassMapper();
+		Map<String, Class<?>> idClassMapping = new HashMap<>();
+		//idClassMapping.put("foo", Foo.class);
+
+		classMapper.setIdClassMapping(idClassMapping);
+		return classMapper;
+	}
 }
