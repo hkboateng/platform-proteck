@@ -120,7 +120,7 @@ $("#sendButton").on("click", function (e) {
 
 //==================================== Set user response =====================================
 function setUserResponse(message) {
-	var UserResponse = '<img class="userAvatar" src=' + "./static/img/userAvatar.jpg" + '><p class="userMsg">' + message + ' </p><div class="clearfix"></div>';
+	var UserResponse = '<img class="userAvatar" src=' + '"assets/img/userAvatar.jpg"' + 'th:src="@{assets/img/userAvatar.jpg}"><p class="userMsg">' + message + ' </p><div class="clearfix"></div>';
 	$(UserResponse).appendTo(".chats").show("slow");
 
 	$(".usrInput").val("");
@@ -185,7 +185,7 @@ function setBotResponse(response) {
 			//if there is no response from Rasa, send  fallback message to the user
 			var fallbackMsg = "I am facing some issues, please try again later!!!";
 
-			var BotResponse = '<img class="botAvatar" src="../static/assets/img/botAvatar.png"  th:src="@{assets/img/botAvatar.png}"/><p class="botMsg">' + fallbackMsg + '</p><div class="clearfix"></div>';
+			var BotResponse = '<img class="botAvatar" src="assets/img/botAvatar.png"  th:src="@{assets/img/botAvatar.png}"/><p class="botMsg">' + fallbackMsg + '</p><div class="clearfix"></div>';
 
 			$(BotResponse).appendTo(".chats").hide().fadeIn(1000);
 			scrollToBottomOfResults();
@@ -197,7 +197,7 @@ function setBotResponse(response) {
 
 				//check if the response contains "text"
 				if (response[i].hasOwnProperty("text")) {
-					var BotResponse = '<img class="botAvatar" src="../static/assets/img/botAvatar.png"  th:src="@{assets/img/botAvatar.png}"/><p class="botMsg">' + response[i].text + '</p><div class="clearfix"></div>';
+					var BotResponse = '<img class="botAvatar" src="assets/img/botAvatar.png"  th:src="@{assets/img/botAvatar.png}"/><p class="botMsg">' + response[i].text + '</p><div class="clearfix"></div>';
 					$(BotResponse).appendTo(".chats").hide().fadeIn(1000);
 				}
 

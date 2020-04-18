@@ -27,7 +27,8 @@
       <!--Import Google Icon Font-->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Raleway:500&display=swap" rel="stylesheet">
-
+      <!--Socket Script -->
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
       <!--Import Font Awesome Icon Font-->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
          integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />  
@@ -53,7 +54,7 @@
             <div class="chat_header">
 
                <!--Add the name of the bot here -->
-               <span class="chat_header_title">HR Bot</span>
+               <span class="chat_header_title">Judith</span>
                <span class="dropdown-trigger" href='#' data-target='dropdown1'>
                   <i class="material-icons">
                   more_vert
@@ -82,7 +83,7 @@
 
          <!--bot profile-->
          <div class="profile_div" id="profile_div">
-            <img class="imgProfile" src="../static/assets/img/botAvatar.png"  th:src="@{assets/img/botAvatar.png}"/>
+            <img class="imgProfile" src="assets/img/botAvatar.png"  th:src="@{assets/img/botAvatar.png}"/>
          </div>
       </div>
 
@@ -92,10 +93,6 @@
 
       <!--Main Script -->
       <script type="text/javascript" src="assets/js/chatbot-script.js"></script>
-
-      <!--Chart.js Script -->
-      <script type="text/javascript" src="assets/js/chart.min.js"></script>
-
    </body>
 
 </html>
